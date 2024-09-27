@@ -1,0 +1,7 @@
+# TODO - Replace the base image with official supported  
+FROM diffusers/diffusers-pytorch-cuda 
+
+RUN pip install fastapi uvicorn
+COPY . .
+
+CMD ["python", "generate.py"]
