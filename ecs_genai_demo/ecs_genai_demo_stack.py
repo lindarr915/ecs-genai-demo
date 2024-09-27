@@ -39,7 +39,7 @@ class EcsGenaiDemoStack(Stack):
         cluster.add_capacity("DefaultAutoScalingGroupCapacity",
             instance_type=ec2.InstanceType("g5.xlarge"),
             desired_capacity=2,
-            machine_image=ecs.EcsOptimizedImage.amazon_linux2023(ecs.AmiHardwareType.GPU)
+            machine_image=ecs.EcsOptimizedImage.amazon_linux2(ecs.AmiHardwareType.GPU)
             
         )
         
